@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: test.api.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.825 s <<< FAILURE! - in test.api.TestRunner
+runTest[1][1]  Time elapsed: 2.033 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+status code was: 400, expected: 201, response time in milliseconds: 223, url: https://tek-insurance-api.azurewebsites.net/api/accounts/add-primary-account, response: 
+{"errorCode":"ACCOUNT_EXIST","httpStatus":"BAD_REQUEST","errorMessage":"Account with Email karate.phantom@tekschool.us is exist"}
+classpath:features/CreateAccount.feature:25
+
