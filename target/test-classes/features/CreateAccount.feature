@@ -7,7 +7,7 @@ Feature: Post Request API - TEK Insurance
     * header Authorization = "Bearer " + tokenValue
     * path "/api/accounts/add-primary-account"
 
-
+	@CreateAccount
   Scenario: Create a new Account with Data Generator
     * def dataGenerator = Java.type("test.api.DataGenerator")
     * def getEmail = dataGenerator.getEmail()
@@ -64,3 +64,10 @@ Feature: Post Request API - TEK Insurance
     * method post
     * status 201
     * print response
+
+    
+    @test123
+    Scenario: Test 
+    * def payment = callonce read('CreateAccount.feature@test')
+    * def paymentId = payment.response.id
+    * print paymentId

@@ -6,7 +6,7 @@ public class TestRunner {
 	
 	@Karate.Test
 	public Karate runTest() {
-		return Karate.run("classpath:features").tags("@PostRequest");
+		return Karate.run("classpath:features").tags("@DBValidation");
 	}
 
 }
